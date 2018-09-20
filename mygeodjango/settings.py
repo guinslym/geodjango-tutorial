@@ -25,7 +25,7 @@ SECRET_KEY = 'rspkbsd^(__0+x%oq4-poqc@ga#wjqqkn!x(7tiue+d8p2wvtl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
+    'world',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +81,18 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'gisdata',
+        'USER': 'guinslym',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': 5432,
+    }
+}
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
