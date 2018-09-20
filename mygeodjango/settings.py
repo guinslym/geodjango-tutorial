@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'world',
 ]
+SHELL_PLUS = "ipython"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
